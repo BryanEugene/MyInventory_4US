@@ -20,7 +20,7 @@ const App = () => {
   let myLoginUser = JSON.parse(localStorage.getItem("user"));
   console.log("USER: ", user);
 
-  // useEffect(() => 
+  // useEffect(() =>
   // {
   //   let user = {
   //     _id: "1234567890",
@@ -31,9 +31,9 @@ const App = () => {
   //     phoneNumber: 1234567890,
   //     imageUrl: "https://example.com/profile.jpg"
   //   };
-    
+
   //   localStorage.setItem("user", JSON.stringify(user));
-    
+
   // });
 
   useEffect(() => {
@@ -73,30 +73,31 @@ const App = () => {
       </div>
     );
 
-    return (
-      <AuthContext.Provider value={value}>
-        <BrowserRouter>
-          <Routes>
-            {/* Public Routes */}
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            
-            {/* Accessible Routes without login */}
-            <Route path="/" element={<Layout />}>
-              <Route index element={<Dashboard />} />
-              <Route path="/inventory" element={<Inventory />} />
-              <Route path="/purchase-details" element={<PurchaseDetails />} />
-              <Route path="/sales" element={<Sales />} />
-              <Route path="/manage-store" element={<Store />} />
-            </Route>
-    
-            {/* Fallback Route */}
-            <Route path="*" element={<NoPageFound />} />
-          </Routes>
-        </BrowserRouter>
-      </AuthContext.Provider>
-    );
-    
+  return (
+    <AuthContext.Provider value={value}>
+      <BrowserRouter>
+        <Routes>
+          {/* Public Routes */}
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
+
+          {/* Accessible Routes without login */}
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Dashboard />} />
+            <Route path="/inventory" element={<Inventory />} />
+            <Route path="/purchase-details" element={<PurchaseDetails />} />
+            <Route path="/sales" element={<Sales />} />
+            <Route path="/manage-store" element={<Store />} />
+          </Route>
+
+          {/* Fallback Route */}
+          <Route path="*" element={<NoPageFound />} />
+        </Routes>
+      </BrowserRouter>
+    </AuthContext.Provider>
+  );
 };
 
 export default App;
+
+// Test db branch
