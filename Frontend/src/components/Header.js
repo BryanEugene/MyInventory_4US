@@ -34,11 +34,11 @@ export default function Header() {
                       <div className="flex justify-center items-center gap-2">
                         <img
                           className="h-8 w-8"
-                          src={require("../assets/logo.png")}
+                          src={require("../assets/MyInventoryLogo.jpeg")}
                           alt="Inventory Management System"
                         />
                         <span className="font-bold text-white italic">
-                          Inventory Management
+                          4US - MyInventory
                         </span>
                       </div>
                     </div>

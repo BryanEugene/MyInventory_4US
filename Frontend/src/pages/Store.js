@@ -12,7 +12,7 @@ function Store() {
       name: "Store A",
       address: "Jl. Sudirman No. 1",
       city: "Jakarta",
-      image: "https://via.placeholder.com/150",
+      image: "../assets/MyInventoryLogo.jpeg",
     },
     {
       _id: "2",
